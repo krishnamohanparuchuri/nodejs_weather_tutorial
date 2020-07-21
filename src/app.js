@@ -5,6 +5,7 @@ const foreCast = require('./utils/forecast')
 const geoCode = require('./utils/geocode')
 
 const app = express();
+const port = process.env.PORT || 3500;
 
 //define path for express config
 const viewsPath = path.join(__dirname, '../templates/views')
@@ -98,6 +99,6 @@ app.get('*', (req, res) => {
     })
 })
 
-app.listen(3500, () => {
-    console.log('server is running on port 3500..')
+app.listen(port, () => {
+    console.log('server is running on port' + port)
 })
