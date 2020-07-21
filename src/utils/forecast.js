@@ -13,7 +13,10 @@ const foreCast = (lat, long, callback) => {
             callback(undefined, body.current.weather_descriptions[0] +
                 '. It is currently ' + body.current.temperature +
                 ' degress out. It feels like ' + body.current.feelslike +
-                ' degress out..')
+                ' degress out. The present weather condition is ' +
+                body.current.weather_descriptions[0] + ' humidity is around ' +
+                body.current.humidity + ' ,The present time is: ' +
+                body.current.observation_time)
         }
     })
 }
